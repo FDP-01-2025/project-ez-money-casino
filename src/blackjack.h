@@ -7,3 +7,5 @@
 using namespace std;
 
 void playBlackjack (string name, int &money){}
+
+#endif

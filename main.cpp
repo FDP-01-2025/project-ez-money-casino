@@ -16,6 +16,8 @@ int main(){
     }
 
     showCasinoMenu(name, money);
+    playBlackjack(name, money);
+    playCraps(name, money);
 
     return 0;
 }

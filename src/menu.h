@@ -13,7 +13,7 @@ void showWelcome(){
     cout << endl;
     cout << " + - + - + - + - + - + - + - + - + " << endl;
     cout << " | E | Z |   | M | O | N | E | Y | " << endl;
-    cout << " + - + - + - + - + - + - + - + - + " << endl:
+    cout << " + - + - + - + - + - + - + - + - + " << endl;
 }
 
 void userDetails (string &name, int &age, int &money){
