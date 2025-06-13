@@ -8,7 +8,8 @@ int main(){
     int money;
 
     showWelcome();
-    userDetails(name, age, money);
+    userData(name, age, money);
+    saveUserData(name, age, money);
 
     if (age < 18) {
         cout << "You must be at least 18 years old to play." << endl;
@@ -16,8 +17,6 @@ int main(){
     }
 
     showCasinoMenu(name, money);
-    playBlackjack(name, money);
-    playCraps(name, money);
 
     return 0;
 }

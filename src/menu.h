@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -16,13 +17,23 @@ void showWelcome(){
     cout << " + - + - + - + - + - + - + - + - + " << endl;
 }
 
-void userDetails (string &name, int &age, int &money){
+void userData (string &name, int &age, int &money){
     cout << "Please enter a nickname: ";
     cin >> name;
     cout << "Please enter your age: ";
     cin >> age;
     cout << "Enter the amount of money you want to add to your account: ";
     cin >> money;
+}
+
+void saveUserData (const string &name, int age, int money){
+    ofstream archive("user_registrations.txt", ios::app);
+    if (archive.is_open()){
+        archive << "Name: " << name << ", Age: " << age << ", Money: $" << money << endl;
+        archive.close();
+    } else {
+        cout << "User data could not be saved" << endl;
+    }
 }
 
 void showCasinoMenu (string name, int &money){
